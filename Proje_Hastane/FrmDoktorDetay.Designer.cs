@@ -29,9 +29,8 @@ namespace Proje_Hastane
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorDetay));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.LblAdSoyad = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.LblTC = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -42,6 +41,8 @@ namespace Proje_Hastane
             this.BtnCikis = new System.Windows.Forms.Button();
             this.BtnDuyurular = new System.Windows.Forms.Button();
             this.BtnGuncelle = new System.Windows.Forms.Button();
+            this.LblAdSoyadd = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -51,10 +52,10 @@ namespace Proje_Hastane
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.LblAdSoyad);
+            this.groupBox1.Controls.Add(this.LblAdSoyadd);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.LblTC);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(284, 114);
@@ -62,41 +63,23 @@ namespace Proje_Hastane
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Doktor Bilgi";
             // 
-            // LblAdSoyad
-            // 
-            this.LblAdSoyad.AutoSize = true;
-            this.LblAdSoyad.Location = new System.Drawing.Point(12, 50);
-            this.LblAdSoyad.Name = "LblAdSoyad";
-            this.LblAdSoyad.Size = new System.Drawing.Size(93, 23);
-            this.LblAdSoyad.TabIndex = 3;
-            this.LblAdSoyad.Text = "Ad Soyad :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(124, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 23);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Null Null";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(124, 27);
+            this.label2.Location = new System.Drawing.Point(37, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "00000000000";
+            this.label2.Size = new System.Drawing.Size(68, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "TC No :";
             // 
             // LblTC
             // 
             this.LblTC.AutoSize = true;
-            this.LblTC.Location = new System.Drawing.Point(37, 27);
+            this.LblTC.Location = new System.Drawing.Point(124, 27);
             this.LblTC.Name = "LblTC";
-            this.LblTC.Size = new System.Drawing.Size(68, 23);
-            this.LblTC.TabIndex = 0;
-            this.LblTC.Text = "TC No :";
+            this.LblTC.Size = new System.Drawing.Size(120, 23);
+            this.LblTC.TabIndex = 1;
+            this.LblTC.Text = "00000000000";
             // 
             // groupBox2
             // 
@@ -136,6 +119,7 @@ namespace Proje_Hastane
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(544, 382);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox4
             // 
@@ -157,6 +141,7 @@ namespace Proje_Hastane
             this.BtnCikis.TabIndex = 4;
             this.BtnCikis.Text = "Çıkış";
             this.BtnCikis.UseVisualStyleBackColor = false;
+            this.BtnCikis.Click += new System.EventHandler(this.BtnCikis_Click);
             // 
             // BtnDuyurular
             // 
@@ -166,6 +151,7 @@ namespace Proje_Hastane
             this.BtnDuyurular.TabIndex = 2;
             this.BtnDuyurular.Text = "Duyurular";
             this.BtnDuyurular.UseVisualStyleBackColor = false;
+            this.BtnDuyurular.Click += new System.EventHandler(this.BtnDuyurular_Click);
             // 
             // BtnGuncelle
             // 
@@ -175,21 +161,44 @@ namespace Proje_Hastane
             this.BtnGuncelle.TabIndex = 1;
             this.BtnGuncelle.Text = "Bilgi Düzenle";
             this.BtnGuncelle.UseVisualStyleBackColor = false;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
+            // 
+            // LblAdSoyadd
+            // 
+            this.LblAdSoyadd.AutoSize = true;
+            this.LblAdSoyadd.Location = new System.Drawing.Point(124, 62);
+            this.LblAdSoyadd.Name = "LblAdSoyadd";
+            this.LblAdSoyadd.Size = new System.Drawing.Size(120, 23);
+            this.LblAdSoyadd.TabIndex = 3;
+            this.LblAdSoyadd.Text = "00000000000";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(37, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 23);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Ad Soyad :";
             // 
             // FrmDoktorDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(839, 436);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Corbel", 14.25F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmDoktorDetay";
-            this.Text = "FrmDoktorDetay";
+            this.Text = "Doktor Detay";
+            this.Load += new System.EventHandler(this.FrmDoktorDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -204,9 +213,8 @@ namespace Proje_Hastane
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label LblAdSoyad;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label LblTC;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RichTextBox RchSikayet;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -215,5 +223,7 @@ namespace Proje_Hastane
         private System.Windows.Forms.Button BtnCikis;
         private System.Windows.Forms.Button BtnDuyurular;
         private System.Windows.Forms.Button BtnGuncelle;
+        private System.Windows.Forms.Label LblAdSoyadd;
+        private System.Windows.Forms.Label label3;
     }
 }

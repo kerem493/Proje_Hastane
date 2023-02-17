@@ -29,6 +29,7 @@ namespace Proje_Hastane
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSekreterDetay));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.LblAdSoyad = new System.Windows.Forms.Label();
             this.LblTC = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@ namespace Proje_Hastane
             this.BtnDuyuruOlustur = new System.Windows.Forms.Button();
             this.RchDuyuru = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.BtnGuncelle = new System.Windows.Forms.Button();
             this.BtnKaydet = new System.Windows.Forms.Button();
             this.MskTC = new System.Windows.Forms.MaskedTextBox();
             this.ChkDurum = new System.Windows.Forms.CheckBox();
@@ -61,6 +61,7 @@ namespace Proje_Hastane
             this.BtnListe = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.BtnBransPanel = new System.Windows.Forms.Button();
+            this.btnduyurular = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -73,6 +74,7 @@ namespace Proje_Hastane
             // 
             // groupBox1
             // 
+            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.Controls.Add(this.LblAdSoyad);
             this.groupBox1.Controls.Add(this.LblTC);
             this.groupBox1.Controls.Add(this.label2);
@@ -152,7 +154,6 @@ namespace Proje_Hastane
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.BtnGuncelle);
             this.groupBox3.Controls.Add(this.BtnKaydet);
             this.groupBox3.Controls.Add(this.MskTC);
             this.groupBox3.Controls.Add(this.ChkDurum);
@@ -169,19 +170,10 @@ namespace Proje_Hastane
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Location = new System.Drawing.Point(278, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(221, 338);
+            this.groupBox3.Size = new System.Drawing.Size(238, 338);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Randevu Paneli";
-            // 
-            // BtnGuncelle
-            // 
-            this.BtnGuncelle.Location = new System.Drawing.Point(6, 286);
-            this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(209, 32);
-            this.BtnGuncelle.TabIndex = 16;
-            this.BtnGuncelle.Text = "Güncelle";
-            this.BtnGuncelle.UseVisualStyleBackColor = true;
             // 
             // BtnKaydet
             // 
@@ -310,9 +302,9 @@ namespace Proje_Hastane
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dataGridView1);
-            this.groupBox4.Location = new System.Drawing.Point(499, 0);
+            this.groupBox4.Location = new System.Drawing.Point(516, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(363, 177);
+            this.groupBox4.Size = new System.Drawing.Size(346, 177);
             this.groupBox4.TabIndex = 17;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Branşlar";
@@ -325,7 +317,7 @@ namespace Proje_Hastane
             this.dataGridView1.Location = new System.Drawing.Point(3, 27);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(357, 147);
+            this.dataGridView1.Size = new System.Drawing.Size(340, 147);
             this.dataGridView1.TabIndex = 0;
             // 
             // dataGridView2
@@ -336,24 +328,24 @@ namespace Proje_Hastane
             this.dataGridView2.Location = new System.Drawing.Point(3, 27);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(363, 193);
+            this.dataGridView2.Size = new System.Drawing.Size(346, 193);
             this.dataGridView2.TabIndex = 0;
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.dataGridView2);
-            this.groupBox5.Location = new System.Drawing.Point(502, 183);
+            this.groupBox5.Location = new System.Drawing.Point(519, 183);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(369, 223);
+            this.groupBox5.Size = new System.Drawing.Size(352, 223);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Doktorlar";
             // 
             // BtnDoktorPanel
             // 
-            this.BtnDoktorPanel.Location = new System.Drawing.Point(35, 27);
+            this.BtnDoktorPanel.Location = new System.Drawing.Point(2, 24);
             this.BtnDoktorPanel.Name = "BtnDoktorPanel";
-            this.BtnDoktorPanel.Size = new System.Drawing.Size(134, 32);
+            this.BtnDoktorPanel.Size = new System.Drawing.Size(139, 32);
             this.BtnDoktorPanel.TabIndex = 0;
             this.BtnDoktorPanel.Text = "Doktor Paneli";
             this.BtnDoktorPanel.UseVisualStyleBackColor = true;
@@ -361,33 +353,46 @@ namespace Proje_Hastane
             // 
             // BtnListe
             // 
-            this.BtnListe.Location = new System.Drawing.Point(315, 27);
+            this.BtnListe.Location = new System.Drawing.Point(263, 24);
             this.BtnListe.Name = "BtnListe";
-            this.BtnListe.Size = new System.Drawing.Size(134, 32);
+            this.BtnListe.Size = new System.Drawing.Size(138, 32);
             this.BtnListe.TabIndex = 2;
             this.BtnListe.Text = "Randevu Liste";
             this.BtnListe.UseVisualStyleBackColor = true;
+            this.BtnListe.Click += new System.EventHandler(this.BtnListe_Click);
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.btnduyurular);
             this.groupBox6.Controls.Add(this.BtnBransPanel);
             this.groupBox6.Controls.Add(this.BtnListe);
             this.groupBox6.Controls.Add(this.BtnDoktorPanel);
             this.groupBox6.Location = new System.Drawing.Point(6, 344);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(493, 62);
+            this.groupBox6.Size = new System.Drawing.Size(510, 62);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Hızlı Erişim";
             // 
             // BtnBransPanel
             // 
-            this.BtnBransPanel.Location = new System.Drawing.Point(175, 27);
+            this.BtnBransPanel.Location = new System.Drawing.Point(147, 23);
             this.BtnBransPanel.Name = "BtnBransPanel";
-            this.BtnBransPanel.Size = new System.Drawing.Size(134, 32);
+            this.BtnBransPanel.Size = new System.Drawing.Size(113, 32);
             this.BtnBransPanel.TabIndex = 3;
             this.BtnBransPanel.Text = "Branş Paneli";
             this.BtnBransPanel.UseVisualStyleBackColor = true;
+            this.BtnBransPanel.Click += new System.EventHandler(this.BtnBransPanel_Click);
+            // 
+            // btnduyurular
+            // 
+            this.btnduyurular.Location = new System.Drawing.Point(407, 23);
+            this.btnduyurular.Name = "btnduyurular";
+            this.btnduyurular.Size = new System.Drawing.Size(97, 32);
+            this.btnduyurular.TabIndex = 4;
+            this.btnduyurular.Text = "Duyurular";
+            this.btnduyurular.UseVisualStyleBackColor = true;
+            this.btnduyurular.Click += new System.EventHandler(this.btnduyurular_Click);
             // 
             // FrmSekreterDetay
             // 
@@ -402,9 +407,11 @@ namespace Proje_Hastane
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Corbel", 14.25F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "FrmSekreterDetay";
-            this.Text = "SekreterDetay";
+            this.Text = "Sekreter Detay";
             this.Load += new System.EventHandler(this.FrmSekreterDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -431,7 +438,6 @@ namespace Proje_Hastane
         private System.Windows.Forms.Button BtnDuyuruOlustur;
         private System.Windows.Forms.RichTextBox RchDuyuru;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button BtnGuncelle;
         private System.Windows.Forms.Button BtnKaydet;
         private System.Windows.Forms.MaskedTextBox MskTC;
         private System.Windows.Forms.CheckBox ChkDurum;
@@ -454,5 +460,6 @@ namespace Proje_Hastane
         private System.Windows.Forms.Button BtnListe;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button BtnBransPanel;
+        private System.Windows.Forms.Button btnduyurular;
     }
 }
