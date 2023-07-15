@@ -1,7 +1,5 @@
-# Proje_Hastane
-
-![Uploading Ekran görüntüsü 2023-07-15 190357.png]()
-![Uploading Ekran görüntüsü 2023-07-15 190343.png…]()
-![Uploading Ekran görüntüsü 2023-07-15 185925.png…]()
-![Uploading Ekran görüntüsü 2023-07-15 185858.png…]()
-![Uploading Ekran görüntüsü 2023-07-15 185840.png…]()
+![Ekran görüntüsü 2023-07-15 185840](https://github.com/kerem493/Proje_Hastane/assets/78110525/0d24ebc7-fd58-4530-8778-2424413346fc)
+![Ekran görüntüsü 2023-07-15 185858](https://github.com/kerem493/Proje_Hastane/assets/78110525/fce8b6bc-8760-4e05-b3e8-47aeeb309914)
+![Ekran görüntüsü 2023-07-15 185925](https://github.com/kerem493/Proje_Hastane/assets/78110525/09a7999b-8a28-44a1-bd72-c2dd5f133fee)
+![Ekran görüntüsü 2023-07-15 190343](https://github.com/kerem493/Proje_Hastane/assets/78110525/e428a203-bb0d-417b-9b16-fef874e5c050)
+![Ekran görüntüsü 2023-07-15 190357](https://github.com/kerem493/Proje_Hastane/assets/78110525/34f86e4c-2f70-4349-848e-3292ef7f0b50)
